@@ -17,21 +17,23 @@ Python:
 <pre> import requests  </pre>
 
 define a request: 
-<pre> 
-def ask_ollama(prompt_text: str, model_name='deepseek-r1') -> str:
-    try:
-        response = requests.post(
-            'http://localhost:11434/api/generate',
-            json={
-                "model": model_name,
-                "prompt": prompt_text, # enter here or define somewhere else
-                "stream": False
-            }
-        )
-        res_json = response.json()
-        return res_json.get('response', 'no model found or no responses')
-    except Exception as e:
-        return f"error: {str(e)}"  </pre>
+<pre> import base64
+
+def ask_vision_model(image_path, vision_prompt=" "):
+    with open(image_path, "rb") as f:
+        img_base64 = base64.b64encode(f.read()).decode("utf-8")
+
+    response = requests.post(
+        "http://localhost:11434/api/generate",
+        json={
+            "model": "qwen2.5vl:7b",
+            "prompt": vision_prompt,
+            "images": [img_base64],
+            "stream": False
+        }
+    )
+    res = response.json()
+    return res.get("response", "error: no model") </pre>
 
 If it is an image input: 
 qwen2.5 as an example
