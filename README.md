@@ -18,7 +18,6 @@ Python:
 
 define a request: 
 <pre> import base64
-
 def ask_vision_model(image_path, vision_prompt=" "):
     with open(image_path, "rb") as f:
         img_base64 = base64.b64encode(f.read()).decode("utf-8")
