@@ -17,7 +17,7 @@ Then you can ask questions and get responses.
 
 # Call the model with "requests" in Python
 
-After you download a model, you can call it in your code in the following way. Then, we can apply LLMs in our local/offline project. An interesting example in my repository [LLMcooker](https://github.com/zsdbn0901/LLMcooker) shows the convenience. Take a picture of your refrigerator， and a visual LLM will detect what you have. Then, with the detected supplies, it will provide you with some possible options and their estimated time. 
+After you download a model, you can call it in your code in the following way. Then, we can apply LLMs in our local/offline project. An interesting example in my repository [LLMcooker](https://github.com/zsdbn0901/LLMcooker) shows the convenience. Take a picture of your refrigerator， and a visual LLM will detect what you have. Then, with the detected supplies, it will provide how to cook and their estimated time. 
 
 Python: 
 <pre> import requests  </pre>
