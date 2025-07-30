@@ -2,6 +2,7 @@
 Choose a model you like from: https://ollama.com/search
 
 deepseek-r1 as an example: 
+
 download command: 
 <pre> ollama pull deepseek-r1 </pre>
 
