@@ -18,18 +18,17 @@ Python:
 
 define a request: 
 <pre> 
-def ask_ollama(prompt_text: str, model_name='llama3:8b') -> str:
-    """将 prompt_text 发给本地 Ollama 并返回回答"""
+def ask_ollama(prompt_text: str, model_name='deepseek-r1') -> str:
     try:
         response = requests.post(
             'http://localhost:11434/api/generate',
             json={
                 "model": model_name,
-                "prompt": prompt_text,
+                "prompt": prompt_text, # enter here or define somewhere else
                 "stream": False
             }
         )
         res_json = response.json()
-        return res_json.get('response', '⚠️ 没有返回 response 字段')
+        return res_json.get('response', 'no model found or no responses')
     except Exception as e:
-        return f"Ollama 请求失败: {str(e)}"  </pre>
+        return f"error: {str(e)}"  </pre>
