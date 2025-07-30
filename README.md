@@ -11,6 +11,10 @@ run command:
 
 Then you can ask questions and get responses. 
 
+<img width="1113" height="628" alt="image" src="https://github.com/user-attachments/assets/1053f315-0bc3-4118-b3d5-66b33583833f" />
+
+
+
 # Call the model with "requests" in Python
 
 After you download a model, you can call it in your code in the following way. Then, we can apply LLMs in our local/offline project. An interesting example in my repository [LLMcooker](https://github.com/zsdbn0901/LLMcooker) shows the convenience. Take a picture of your refrigerator， and a visual LLM will detect what you have. Then, with the detected supplies, it will provide you with some possible options and their estimated time. 
