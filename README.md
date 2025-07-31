@@ -1,4 +1,6 @@
 # Load-local-LLMs
+Download and install Ollama from https://ollama.com/
+
 Choose a model you like from: https://ollama.com/search
 
 deepseek-r1 as an example: 
